@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+	selector: 'app-root',
+	templateUrl: './app.component.html',
+	styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'aoe2de-link-redirector';
+	title = 'Age of Empires II: Definitive Edition Link Redirector';
 }
