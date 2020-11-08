@@ -1,4 +1,6 @@
 language: node_js
+node_js:
+  - node
 
 script:
   npm run build
@@ -11,7 +13,7 @@ deploy:
   local_dir: dist/
   target_branch: dist
   on:
-    branch: dist
+    branch: main
 
 notifications:
   email:
