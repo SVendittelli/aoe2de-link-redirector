@@ -1,0 +1,45 @@
+import { Player } from './player';
+
+export interface Lobby {
+	match_id: string;
+	lobby_id: string;
+	match_uuid: string;
+	version?: any;
+	name: string;
+	num_players: number;
+	num_slots: number;
+	average_rating: number;
+	cheats: boolean;
+	full_tech_tree: boolean;
+	ending_age: number;
+	expansion?: any;
+	game_type: number;
+	has_custom_content?: boolean;
+	has_password: boolean;
+	lock_speed: boolean;
+	lock_teams: boolean;
+	map_size: number;
+	map_type: number;
+	pop: number;
+	ranked: boolean;
+	leaderboard_id: number;
+	rating_type: number;
+	resources: number;
+	rms?: any;
+	scenario?: any;
+	server: string;
+	shared_exploration: boolean;
+	speed: number;
+	starting_age: number;
+	team_together: boolean;
+	team_positions: boolean;
+	treaty_length: number;
+	turbo: boolean;
+	victory: number;
+	victory_time: number;
+	visibility: number;
+	opened: number;
+	started: number;
+	finished: number;
+	players: Player[];
+}

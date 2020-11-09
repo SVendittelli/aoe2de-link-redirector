@@ -7,6 +7,7 @@
 	<div *ngIf="!autoRedirect">
 		Click here <a [href]="url" (click)="onClickOpen()">{{ urlString }}</a> to open lobby.
 	</div>
+	<app-lobby [lobby]="lobby"></app-lobby>
 </div>
 <div *ngIf="!urlString">
 	Invalid game ID.

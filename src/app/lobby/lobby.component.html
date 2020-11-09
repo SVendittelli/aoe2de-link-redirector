@@ -1,0 +1,10 @@
+<div *ngIf="lobby">
+	<div>Name: {{ lobby.name }}</div>
+	<div>Players: {{ lobby.num_players }}/{{ lobby.num_slots }}</div>
+	<div>Created: {{ lobby.opened * 1000 | timeAgo }}</div>
+	<div *ngFor="let player of lobby.players">
+		<div *ngIf="player.profile_id">
+			<div>Slot {{ player.slot }}: {{ player.name }}</div>
+		</div>
+	</div>
+</div>
