@@ -31,9 +31,8 @@ export class RedirectorComponent implements OnInit {
 	ngOnInit(): void {
 		this.route.queryParams
 			.pipe(
-				filter(params => !isNaN(params.id)),
 				tap({ next: params => {
-					this.urlString = `aoe2de://${Number(params.id)}`;
+					this.urlString = `aoe2de://${params.id}`;
 					this.autoRedirect = (params.auto) == 'true';
 				}}),
 				filter(_ => this.autoRedirect),
