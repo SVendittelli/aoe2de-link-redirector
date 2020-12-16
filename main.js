@@ -180,8 +180,8 @@ class RedirectorComponent {
     }
     ngOnInit() {
         this.route.queryParams
-            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["filter"])(params => !isNaN(params.id)), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["tap"])({ next: params => {
-                this.urlString = `aoe2de://${Number(params.id)}`;
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["tap"])({ next: params => {
+                this.urlString = `aoe2de://${params.id}`;
                 this.autoRedirect = (params.auto) == 'true';
             } }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["filter"])(_ => this.autoRedirect), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["switchMap"])(_ => Object(rxjs__WEBPACK_IMPORTED_MODULE_1__["interval"])(1000).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(seconds => seconds + 1))), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["takeWhile"])(_ => this.timerRunning), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["tap"])(secondsElapsed => this.secondsRemaining = this.maxWait - secondsElapsed))
             .subscribe({
